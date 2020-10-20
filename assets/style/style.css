@@ -1,10 +1,55 @@
-*{
+* {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-touch-action: manipulation;
   touch-action: manipulation;
-  outline: 1px solid red;
+  //outline: 1px solid red;
 }
+
 .hidden {
-  display: none
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header {
+  height: 10vh;
+}
+
+main {
+  height: 85vh;
+}
+
+.tab-menu {
+}
+
+.stage {
+  margin-top: 2vh;
+}
+
+.tab {
+  padding: 3vh;
+  color: #fff;
+}
+
+.cars-tab, .cars {
+  background-color: #4aabf2;
+}
+
+.houses-tab, .houses {
+  background-color: #03e19e;
+}
+
+.jerbs-tab, .jerbs {
+  background-color: #f79045;
+}
+
+.stage-content {
+  height: 100%;
+  padding: 3vh;
+}
+
+footer {
+  height: 5vh;
 }

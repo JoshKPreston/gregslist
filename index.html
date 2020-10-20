@@ -8,10 +8,11 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>gregslist</title>
 </head>
 
-<body>
+<body class="vh-100">
     <header>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
@@ -20,30 +21,28 @@
             </a>
         </nav>
     </header>
-    <div class="container-fluid vh-100">
-        <main id="app" class="row">
+    <div class="container-fluid">
+        <main class="row">
 
-            <div class="col-10">
-                <div class="navbar">
-                    <div id="carsNav" class="nav-item">Cars</div>
-                    <div id="housesNav" class="nav-item">Houses</div>
-                    <div id="jerbsNav" class="nav-item">Jerbs</div>
+            <div class="col-12 stage">
+                <div class="d-flex justify-content-start sticky-top tab-menu">
+                    <button onclick="app.showContent('cars')" id="carsNav" class="tab cars-tab">Cars</button>
+                    <button onclick="app.showContent('houses')" id="housesNav" class="tab houses-tab">Houses</button>
+                    <button onclick="app.showContent('jerbs')" id="jerbsNav" class="tab jerbs-tab">Jerbs</button>
                 </div>
-            </div>
-            <div class="row stage">
-                <div class="col-10 hidden" id="cars"></div>
-                <div class="col-10 hidden" id="houses"></div>
-                <div class="col-10 hidden" id="jerbs"></div>
+                <div id="cars" class="row stage-content cars"></div>
+                <div id="houses" class="row hidden stage-content houses"></div>
+                <div id="jerbs" class="row hidden stage-content jerbs"></div>
             </div>
 
         </main>
-        <footer class="row">
+        <footer class="row bg-dark text-light text-center">
             <div class="col-12">
-                <p><small>Preston Designs</small></p>
             </div>
         </footer>
     </div>
     <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

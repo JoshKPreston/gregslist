@@ -7,6 +7,15 @@ class App {
   carController = new CarController();
   houseController = new HouseController();
   jerbController = new JerbController();
+
+    
+  showContent = (content) => {
+    document.querySelectorAll('.stage-content').forEach(e => {
+      e.classList.add('hidden')
+    })
+    document.getElementById(content).classList.remove('hidden')
+  }
+
 }
 
 window["app"] = new App();

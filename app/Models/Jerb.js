@@ -25,10 +25,10 @@ export default class Jerb {
       <div class="col-4">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">${this.jerbTitle}</h5>
-            <h6 class="card-subtitle">${this.company}</h6>
-            <p class="card-text">${this.rate}</p>
-            <p class="card-text">${this.hours}</p>
+            <h5 class="card-title">Jerb Title: ${this.jerbTitle}</h5>
+            <h6 class="card-subtitle">Company: ${this.company}</h6>
+            <p class="card-text">Pay: ${this.rate}</p>
+            <p class="card-text">Hours: ${this.hours}</p>
             <p class="card-text">${this.description}</p>
           </div>
         </div>

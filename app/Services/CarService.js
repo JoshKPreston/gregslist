@@ -4,14 +4,23 @@ import { api } from "./AxiosService.js"
 
 class CarService {
   constructor() {
-
+    this.getCars()
   }
 
+  // read
   getCars() {
     api.get("cars").then(res => {
-      console.log(res.data);
-    })
+      ProxyState.cars = res.data.data.map(rawData => new Car(rawData))
+    }).catch(err => console.log(err))
   }
+
+  // create
+
+
+  // update
+
+
+  // delete
 
 }
 

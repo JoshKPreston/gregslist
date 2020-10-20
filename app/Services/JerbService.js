@@ -4,13 +4,13 @@ import { api } from "./AxiosService.js"
 
 class JerbService {
   constructor() {
-    
+    this.getJerbs()
   }
 
   getJerbs() {
     api.get("jobs").then(res => {
-      console.log(res.data);
-    })
+      ProxyState.jerbs = res.data.data.map(rawData => new Jerb(rawData))
+    }).catch(err => console.log(err))
   }
 
 

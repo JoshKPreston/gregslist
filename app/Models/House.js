@@ -25,18 +25,18 @@ export default class House {
     this.imgUrl = data.imgUrl 
   }
 
-  get Tempalte() {
+  get Template() {
     return /*html*/ `
     <div class="col-4">
       <div class="card">
         <img class="card-img-top" src="${this.imgUrl}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${this.description}</h5>
-          <h6 class="card-subtitle">${this.price}</h6>
-          <h6 class="card-subtitle">${this.year}</h6>
-          <h6 class="card-subtitle">${this.bedrooms}</h6>
-          <h6 class="card-subtitle">${this.bathrooms}</h6>
-          <h6 class="card-subtitle">${this.levels}</h6>
+          <h6 class="card-subtitle">$${this.price}</h6>
+          <h6 class="card-subtitle">Year: ${this.year}</h6>
+          <h6 class="card-subtitle">Beds: ${this.bedrooms}</h6>
+          <h6 class="card-subtitle">Baths:${this.bathrooms}</h6>
+          <h6 class="card-subtitle">Levels: ${this.levels}</h6>
         </div>
       </div>
     </div>

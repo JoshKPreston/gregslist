@@ -4,13 +4,13 @@ import { api } from "./AxiosService.js"
 
 class HouseService {
   constructor() {
-    
+    this.getHouses()
   }
 
   getHouses() {
     api.get("houses").then(res => {
-      console.log(res.data);
-    })
+      ProxyState.houses = res.data.data.map(rawData => new House(rawData))
+    }).catch(err => console.log(err))
   }
 
 }
