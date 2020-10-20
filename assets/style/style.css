@@ -1,0 +1,10 @@
+*{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-touch-action: manipulation;
+  touch-action: manipulation;
+  outline: 1px solid red;
+}
+.hidden {
+  display: none
+}
