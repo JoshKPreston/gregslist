@@ -42,4 +42,63 @@ export default class House {
     </div>
     `
   }
+
+
+  get Form() {
+    return /*html*/ `
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Post a new car</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="newListingForm" onsubmit="app.postListing(event)">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="imgUrl">ImgUrl</label>
+                            <input class="form-control" type="text" name="imgUrl" id="dataimgUrl">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input class="form-control" type="text" name="description" id="dataDescription">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input class="form-control" type="number" name="price" id="dataPrice">
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input class="form-control" type="number" min="1886" max="" name="year"
+                                id="dataYear">
+                        </div>
+                        <div class="form-group">
+                            <label for="make">#Beds</label>
+                            <input class="form-control" type="text" name="make" id="dataMake">
+                        </div>
+                        <div class="form-group">
+                            <label for="model">#Baths</label>
+                            <input class="form-control" type="text" name="model" id="dataModel">
+                        </div>
+                        <div class="form-group">
+                            <label for="model">#Levels</label>
+                            <input class="form-control" type="number" name="levels" id="dataLevels">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    `
+  }
+
+
+  
 }

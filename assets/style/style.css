@@ -8,29 +8,33 @@
 
 .hidden {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-header {
-  height: 10vh;
+.navbar {
+  height: 15vh;
+}
+
+.navbar-brand {
+  font-size: 2em;
 }
 
 main {
-  height: 85vh;
-}
-
-.tab-menu {
+  height: 90vh;
 }
 
 .stage {
-  margin-top: 2vh;
+  padding: 0;
 }
 
 .tab {
   padding: 3vh;
   color: #fff;
+  font-size: 1.2em;
+  box-shadow: inset -10vw 0 50px 0 #000;
+}
+
+.tab:hover {
+  box-shadow: none;
 }
 
 .cars-tab, .cars {
@@ -48,6 +52,18 @@ main {
 .stage-content {
   height: 100%;
   padding: 3vh;
+}
+
+.new-listing-btn {
+  position: absolute;
+  bottom: -10vh;
+  right: 0;
+  width: 100%;
+}
+
+.listing {
+  box-shadow: 0 0 0.5vw 0 #000;
+  width: 100%;
 }
 
 footer {

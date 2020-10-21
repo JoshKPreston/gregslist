@@ -15,4 +15,9 @@ export default class HouseController {
   constructor() {
     ProxyState.on("houses", _draw)
   }
+
+
+  getNewForm(target) {
+    houseService.getNewForm(target)
+  }
 }

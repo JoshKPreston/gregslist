@@ -12,7 +12,7 @@
     <title>gregslist</title>
 </head>
 
-<body class="vh-100">
+<body class="bg-dark vh-100">
     <header>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
@@ -23,13 +23,39 @@
     </header>
     <div class="container-fluid">
         <main class="row">
+            <div class="d-flex justify-content-start tab-menu sticky-top">
+                <div class="d-flex flex-column cars-tab">
+                    <button onmouseover="app.showNewFormBtnElem('newCar')" onclick="app.showContent('cars')"
+                        id="carsNav" class="btn tab cars-tab">Cars</button>
+                    <button data-target="#exampleModalCenter" data-toggle="modal" onclick="app.getNewForm('car')"
+                        onmouseout="app.hideNewFormBtnElem('newCar')" id="newCar"
+                        class="btn tab cars-tab new-listing-btn hidden">+</button>
+                </div>
+                <div class="d-flex flex-column cars-tab">
+                    <button onmouseover="app.showNewFormBtnElem('newHouse')" onclick="app.showContent('houses')"
+                        id="housesNav" class="btn tab houses-tab">Houses</button>
+                    <button data-target="#exampleModalCenter" data-toggle="modal" onclick="app.getNewForm('house')"
+                        onmouseout="app.hideNewFormBtnElem('newHouse')" id="newHouse"
+                        class="btn tab houses-tab new-listing-btn hidden">+</button>
+                </div>
+                <div class="d-flex flex-column cars-tab">
+                    <button onmouseover="app.showNewFormBtnElem('newJerb')" onclick="app.showContent('jerbs')"
+                        id="jerbsNav" class="btn tab jerbs-tab">Jerbs</button>
+                    <button data-target="#exampleModalCenter" data-toggle="modal" onclick="app.getNewForm('jerb')"
+                        onmouseout="app.hideNewFormBtnElem('newJerb')" id="newJerb"
+                        class="btn tab jerbs-tab new-listing-btn hidden">+</button>
+                </div>
+            </div>
+
 
             <div class="col-12 stage">
-                <div class="d-flex justify-content-start sticky-top tab-menu">
-                    <button onclick="app.showContent('cars')" id="carsNav" class="tab cars-tab">Cars</button>
-                    <button onclick="app.showContent('houses')" id="housesNav" class="tab houses-tab">Houses</button>
-                    <button onclick="app.showContent('jerbs')" id="jerbsNav" class="tab jerbs-tab">Jerbs</button>
-                </div>
+
+                <div id="newListingFormContainer"></div>
+
+                
+
+
+
                 <div id="cars" class="row stage-content cars"></div>
                 <div id="houses" class="row hidden stage-content houses"></div>
                 <div id="jerbs" class="row hidden stage-content jerbs"></div>

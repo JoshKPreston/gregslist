@@ -15,4 +15,9 @@ export default class JerbService {
   constructor() {
     ProxyState.on("jerbs", _draw)
   }
+
+
+  getNewForm(target) {
+    jerbService.getNewForm(target)
+  }
 }
