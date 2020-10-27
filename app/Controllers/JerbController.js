@@ -10,6 +10,10 @@ let _draw = () => {
 }
 
 
+let _drawForm = () => {
+  document.getElementById('newListingFormContainer').innerHTML = ProxyState.jerbs[0].Form
+}
+
 // Public
 export default class JerbService {
   constructor() {
@@ -17,7 +21,8 @@ export default class JerbService {
   }
 
 
-  getNewForm(target) {
-    jerbService.getNewForm(target)
+  getNewForm() {
+    _drawForm()
   }
+
 }

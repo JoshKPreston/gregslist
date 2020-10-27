@@ -7,15 +7,12 @@ class CarService {
     this.getCars()
   }
 
-
-  // read
   getCars() {
     api.get("cars").then(res => {
       ProxyState.cars = res.data.data.map(rawData => new Car(rawData))
     }).catch(err => console.log(err))
   }
 
-  // create
 
 
   // update

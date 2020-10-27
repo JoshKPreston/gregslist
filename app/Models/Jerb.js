@@ -22,14 +22,14 @@ export default class Jerb {
 
   get Template() {
     return /*html*/ `
-      <div class="col-4">
-        <div class="card">
+      <div class="col-12 col-md-4 d-flex mt-3 mb-3">
+        <div class="card listing">
           <div class="card-body">
             <h5 class="card-title">Jerb Title: ${this.jerbTitle}</h5>
             <h6 class="card-subtitle">Company: ${this.company}</h6>
-            <p class="card-text">Pay: ${this.rate}</p>
-            <p class="card-text">Hours: ${this.hours}</p>
-            <p class="card-text">${this.description}</p>
+            <h6 class="card-text">Pay: ${this.rate}</h6>
+            <h6 class="card-text">Hours: ${this.hours}</h6>
+            <h6 class="card-text">${this.description}</h6>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default class Jerb {
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Post a new car</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Post a new jerb</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -76,7 +76,7 @@ export default class Jerb {
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
             </div>

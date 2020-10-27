@@ -9,6 +9,9 @@ let _draw = () => {
   document.getElementById('houses').innerHTML = template
 }
 
+let _drawForm = () => {
+  document.getElementById('newListingFormContainer').innerHTML = ProxyState.houses[0].Form
+}
 
 // Public
 export default class HouseController {
@@ -17,7 +20,8 @@ export default class HouseController {
   }
 
 
-  getNewForm(target) {
-    houseService.getNewForm(target)
+  getNewForm() {
+    _drawForm()
   }
+
 }

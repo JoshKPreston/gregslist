@@ -27,8 +27,8 @@ export default class House {
 
   get Template() {
     return /*html*/ `
-    <div class="col-4">
-      <div class="card">
+    <div class="col-12 col-md-4 d-flex mt-3 mb-3">
+      <div class="card listing">
         <img class="card-img-top" src="${this.imgUrl}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${this.description}</h5>
@@ -51,7 +51,7 @@ export default class House {
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Post a new car</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Post a new house</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -90,7 +90,7 @@ export default class House {
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
             </div>

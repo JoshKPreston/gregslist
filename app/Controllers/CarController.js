@@ -11,8 +11,7 @@ let _draw = () => {
 }
 
 let _drawForm = () => {
-  ProxyState.cars.forEach(c => {})
-  document.getElementById('newListingFormContainer').innerHTML = new Car().Form
+  document.getElementById('newListingFormContainer').innerHTML = ProxyState.cars[0].Form
 }
 
 
@@ -25,6 +24,13 @@ export default class CarController {
 
   getNewForm() {
     _drawForm()
+  }
+
+  create(e) {
+    e.preventDefault()
+    let form = e.target
+
+    console.log(form);
   }
 
 
